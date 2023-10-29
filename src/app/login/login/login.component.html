@@ -1,0 +1,51 @@
+<div style="width: 100%; display: flex; height: 100%;">
+
+    <div class="left-part" style="width: 35%;">
+
+        <div style="margin-top: 15em;">
+            <h1 style="display: flex; justify-content: center; margin-bottom: 0;">Bella Estética</h1>
+            <p style="display: flex; justify-content: center; margin-top: .5em;">Bem vindo <a style="color: #fff; margin-left: 1em;" href="http://">Registrar</a></p>
+
+            <div style="margin-top: 5em; display: flex; justify-content: center;">
+                <mat-form-field style="justify-content: center;" class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                           placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <mat-form-field style="justify-content: center;" class="example-full-width">
+                    <mat-label>senha</mat-label>
+                    <input type="password" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Please enter a valid password address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      password is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <button style="width: 212px;" mat-raised-button color="primary">login</button>
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="right-part" style="width: 75%; align-items: center;">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <Img style="align-self: center; width: 600px;" src="./../../../assets/Design_sem_nome-removebg-preview.png">
+        </div>
+    </div>
+
+</div>
+
+
